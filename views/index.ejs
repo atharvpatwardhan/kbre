@@ -57,9 +57,10 @@
   <h3 id="question"></h3>
   
   <form id="answerChoices">
-    <input type="checkbox" name="answers" id="0">
+  <%if(quiz["questions"][currentQuestion]["q_type"]==="single"){%>
+    <input type="radio" name="answers" id="0">
     <label for="0" id="ansLabels"></label><br id="b0">
-    <input type="checkbox" name="answers" id="1">
+    <input type="radio" name="answers" id="1">
     <label for="1" id="ansLabels"></label><br id="b1">
     <input type="radio" name="answers" id="2">
     <label for="2" id="ansLabels"></label><br id="b2">
@@ -71,6 +72,27 @@
     <label for="5" id="ansLabels"></label><br id="b5">
     <input type="radio" name="answers" id="6">
     <label for="6" id="ansLabels"></label><br id="b6">
+    <%}%>
+    <%if(quiz["questions"][currentQuestion]["q_type"]==="multi"){%>
+    <input type="checkbox" name="answers" id="0">
+    <label for="0" id="ansLabels"></label><br id="b0">
+    <input type="checkbox" name="answers" id="1">
+    <label for="1" id="ansLabels"></label><br id="b1">
+    <input type="checkbox" name="answers" id="2">
+    <label for="2" id="ansLabels"></label><br id="b2">
+    <input type="checkbox" name="answers" id="3">
+    <label for="3" id="ansLabels"></label><br id="b3">
+    <input type="checkbox" name="answers" id="4">
+    <label for="4" id="ansLabels"></label><br id="b4">
+    <input type="checkbox" name="answers" id="5">
+    <label for="5" id="ansLabels"></label><br id="b5">
+    <input type="checkbox" name="answers" id="6">
+    <label for="6" id="ansLabels"></label><br id="b6">
+    <%}%>
+    <%if(quiz["questions"][currentQuestion]["q_type"]==="text"){%>
+    <input type="text" name="answers" id="0">
+    <label for="0" id="ansLabels"></label><br id="b0">
+    <%}%>
   </form>
   <div id="images"></div><br>
   <button id="previousQuestion" class="btn btn-danger btn-sm"><< Back</button>
