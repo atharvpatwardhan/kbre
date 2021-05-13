@@ -15,12 +15,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/gzgracez/dynamicQuiz.git"
+    "url": ""
   },
   "author": "Grace Zhang",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gzgracez/dynamicQuiz/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/gzgracez/dynamicQuiz#readme"
+  "homepage": ""
 }
