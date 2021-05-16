@@ -1,7 +1,7 @@
 /*//update title of tab
 Take Quiz, modify quiz, edit quiz, delete quiz
 use templating for dropdown quiz selection?
-
+*/
 var express = require('express');
 var bodyParser = require('body-parser');
 var fs = require('fs');
@@ -23,6 +23,10 @@ app.get('/', function (req, res) {
     titles[i] = jsonContent[i]["title"];
   }
   res.render('index',{titles: titles});
+});
+
+app.get('/greet', function (req, res) {
+ res.send('Hello Atharv!')
 });
 
 app.get('/,/quiz', function (req, res) {
@@ -150,14 +154,3 @@ var server = app.listen(process.env.PORT || 4000, function() {
   var port = server.address().port;
   console.log('Example app listening at http://%s:%s', host, port);
 });
-*/
-/*anyth
-*/
-
-var http = require('http');
-
-//create a server object:
-http.createServer(function (req, res) {
-  res.write('Hello Atharv!'); //write a response to the client
-  res.end(); //end the response
-}).listen(8080); //the server object listens on port 8080
